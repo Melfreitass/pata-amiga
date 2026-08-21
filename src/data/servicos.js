@@ -1,0 +1,58 @@
+const servicos = [
+  {
+    id: 1,
+    nome: "Banho",
+    descricao: "Banho completo com produtos específicos para pets.",
+    preco: 45.00,
+    categoria: "Higiene",
+  },
+  {
+    id: 2,
+    nome: "Banho e Tosa",
+    descricao: "Banho completo acompanhado de tosa higiênica ou estética.",
+    preco: 70.00,
+    categoria: "Higiene",
+  },
+  {
+    id: 3,
+    nome: "Tosa",
+    descricao: "Tosa realizada de acordo com o tipo e necessidade do pet.",
+    preco: 50.00,
+    categoria: "Higiene",
+  },
+  {
+    id: 4,
+    nome: "Corte de Unhas",
+    descricao: "Corte e cuidado das unhas do seu pet.",
+    preco: 20.00,
+    categoria: "Cuidados",
+  },
+  {
+    id: 5,
+    nome: "Hidratação",
+    descricao: "Tratamento para deixar os pelos macios e hidratados.",
+    preco: 35.00,
+    categoria: "Cuidados",
+  },
+  {
+    id: 6,
+    nome: "Limpeza de Ouvidos",
+    descricao: "Higienização cuidadosa da região dos ouvidos.",
+    preco: 25.00,
+    categoria: "Cuidados",
+  },
+  {
+    id: 7,
+    nome: "Escovação Dental",
+    descricao: "Higiene bucal para auxiliar na saúde dos dentes do pet.",
+    preco: 30.00,
+    categoria: "Saúde",
+  },
+  {
+    id: 8,
+    nome: "Consulta Veterinária",
+    descricao: "Avaliação geral da saúde do seu pet.",
+    preco: 100.00,
+    categoria: "Saúde",
+  },
+];
