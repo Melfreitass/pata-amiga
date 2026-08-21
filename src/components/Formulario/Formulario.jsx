@@ -1,18 +1,19 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "../../schema/formSchema";
+
 import {
     FaPaw,
     FaUser,
-    FaPhone,
     FaDog,
+    FaPhone,
     FaCalendarCheck,
-    FaArrowRight,
+    FaClipboardList,
 } from "react-icons/fa";
 
-import "./Formulario.module.css";
+import styles from "./Formulario.module.css";
 
-export default function Form() {
+export default function Formulario() {
     const {
         register,
         handleSubmit,
@@ -26,107 +27,299 @@ export default function Form() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <main className={styles.page}>
 
-            <h1>Cadastro do Pet</h1>
+            <section className={styles.bookingSection}>
 
-            {/* Nome do tutor */}
-            <div>
-                <label>Nome do tutor</label>
+                {/* =========================
+                    LADO ESQUERDO
+                ========================= */}
 
-                <input
-                    type="text"
-                    placeholder="Digite o nome do tutor"
-                    {...register("tutorName")}
-                />
+                <div className={styles.info}>
 
-                {errors.tutorName && (
-                    <p>{errors.tutorName.message}</p>
-                )}
-            </div>
+                    <div className={styles.tag}>
+                        <FaClipboardList />
+                        <span>AGENDAMENTO RÁPIDO</span>
+                    </div>
 
-            {/* Nome do pet */}
-            <div>
-                <label>Nome do pet</label>
+                    <h1>
+                        Marque o próximo cuidado
+                        <br />
+                        do seu pet
+                    </h1>
 
-                <input
-                    type="text"
-                    placeholder="Digite o nome do pet"
-                    {...register("petName")}
-                />
+                    <p>
+                        Preencha a etiqueta ao lado com os dados do
+                        tutor e do pet. Nossa equipe confirma por
+                        telefone em até 1 hora.
+                    </p>
 
-                {errors.petName && (
-                    <p>{errors.petName.message}</p>
-                )}
-            </div>
+                    <div className={styles.benefits}>
 
-            {/* Espécie */}
-            <div>
-                <label>Espécie</label>
+                        <div className={styles.benefit}>
+                            <span className={styles.dot}></span>
+                            <span>Resposta em até 1 hora útil</span>
+                        </div>
 
-                <input
-                    type="text"
-                    placeholder="Ex: Cachorro, Gato, Coelho..."
-                    {...register("species")}
-                />
+                        <div className={styles.benefit}>
+                            <span className={styles.dot}></span>
+                            <span>Sem taxa de agendamento</span>
+                        </div>
 
-                {errors.species && (
-                    <p>{errors.species.message}</p>
-                )}
-            </div>
+                        <div className={styles.benefit}>
+                            <span className={styles.dot}></span>
+                            <span>Cancelamento flexível</span>
+                        </div>
 
-            {/* Raça */}
-            <div>
-                <label>Raça</label>
+                    </div>
 
-                <input
-                    type="text"
-                    placeholder="Ex: Labrador, Siames, etc."
-                    {...register("race")}
-                />
+                </div>
 
-                {errors.race && (
-                    <p>{errors.race.message}</p>
-                )}
-            </div>
 
-            {/* Telefone */}
-            <div>
-                <label>Telefone</label>
+                {/* =========================
+                    FORMULÁRIO
+                ========================= */}
 
-                <input
-                    type="text"
-                    placeholder="(11) 98765-4321"
-                    {...register("phone")}
-                />
+                <div className={styles.formCard}>
 
-                {errors.phone && (
-                    <p>{errors.phone.message}</p>
-                )}
-            </div>
+                    {/* Ícone superior */}
 
-            {/* Serviço */}
-            <div>
-                <label>Serviço</label>
+                    <div className={styles.cardIcon}>
+                        <FaPaw />
+                    </div>
 
-                <select {...register("service")}>
-                    <option value="">Selecione um serviço</option>
-                    <option value="Banho e Tosa">Banho e Tosa</option>
-                    <option value="Consulta Veterinária">Consulta Veterinária</option>
-                    <option value="Hospedagem">Hospedagem</option>
-                    <option value="Adestramento">Adestramento</option>
-                </select>
 
-                {errors.service && (
-                    <p>{errors.service.message}</p>
-                )}
-            </div>
+                    {/* Título */}
 
-            {/* Botão */}
-            <button type="submit">
-                Cadastrar
-            </button>
+                    <div className={styles.formHeader}>
+                        <h2>Etiqueta de agendamento</h2>
 
-        </form>
+                        <p>
+                            Todos os campos são obrigatórios
+                        </p>
+                    </div>
+
+
+                    <form onSubmit={handleSubmit(onSubmit)}>
+
+                        {/* =========================
+                            NOME DO TUTOR
+                        ========================= */}
+
+                        <div className={styles.field}>
+
+                            <label
+                                htmlFor="tutorName"
+                                className={styles.label}
+                            >
+                                <FaUser />
+                                <span>NOME DO TUTOR</span>
+                            </label>
+
+                            <input
+                                id="tutorName"
+                                type="text"
+                                placeholder="Ex: Camila Ferreira"
+                                {...register("tutorName")}
+                            />
+
+                            {errors.tutorName && (
+                                <span className={styles.error}>
+                                    {errors.tutorName.message}
+                                </span>
+                            )}
+
+                        </div>
+
+
+                        {/* =========================
+                            PET + ESPÉCIE
+                        ========================= */}
+
+                        <div className={styles.row}>
+
+                            {/* NOME DO PET */}
+
+                            <div className={styles.field}>
+
+                                <label
+                                    htmlFor="petName"
+                                    className={styles.label}
+                                >
+                                    <FaPaw />
+                                    <span>NOME DO PET</span>
+                                </label>
+
+                                <input
+                                    id="petName"
+                                    type="text"
+                                    placeholder="Ex: Rex"
+                                    {...register("petName")}
+                                />
+
+                                {errors.petName && (
+                                    <span className={styles.error}>
+                                        {errors.petName.message}
+                                    </span>
+                                )}
+
+                            </div>
+
+
+                            {/* ESPÉCIE */}
+
+                            <div className={styles.field}>
+
+                                <label
+                                    htmlFor="species"
+                                    className={styles.label}
+                                >
+                                    <FaDog />
+                                    <span>ESPÉCIE</span>
+                                </label>
+
+                                <input
+                                    id="species"
+                                    type="text"
+                                    placeholder="Ex: Cachorro"
+                                    {...register("species")}
+                                />
+
+                                {errors.species && (
+                                    <span className={styles.error}>
+                                        {errors.species.message}
+                                    </span>
+                                )}
+
+                            </div>
+
+                        </div>
+                        {/* RAÇA */}
+
+                        <div className={styles.field}>
+
+                            <label
+                                htmlFor="race"
+                                className={styles.label}
+                            >
+                                <FaDog />
+                                <span>RAÇA</span>
+                            </label>
+
+                            <input
+                                id="race"
+                                type="text"
+                                placeholder="Ex: Labrador"
+                                {...register("race")}
+                            />
+
+                            {errors.race && (
+                                <span className={styles.error}>
+                                    {errors.species.message}
+                                </span>
+                            )}
+
+                        </div>
+
+
+                        {/* =========================
+                            TELEFONE
+                        ========================= */}
+
+                        <div className={styles.field}>
+
+                            <label
+                                htmlFor="phone"
+                                className={styles.label}
+                            >
+                                <FaPhone />
+                                <span>TELEFONE</span>
+                            </label>
+
+                            <input
+                                id="phone"
+                                type="text"
+                                placeholder="(11) 91234-5678"
+                                {...register("phone")}
+                            />
+
+                            {errors.phone && (
+                                <span className={styles.error}>
+                                    {errors.phone.message}
+                                </span>
+                            )}
+
+                        </div>
+
+
+                        {/* =========================
+                            SERVIÇO
+                        ========================= */}
+
+                        <div className={styles.field}>
+
+                            <label
+                                htmlFor="service"
+                                className={styles.label}
+                            >
+                                <FaCalendarCheck />
+                                <span>SERVIÇO</span>
+                            </label>
+
+                            <select
+                                id="service"
+                                {...register("service")}
+                            >
+
+                                <option value="">
+                                    Selecione um serviço
+                                </option>
+
+                                <option value="Banho e Tosa">
+                                    Banho e Tosa
+                                </option>
+
+                                <option value="Consulta Veterinária">
+                                    Consulta Veterinária
+                                </option>
+
+                                <option value="Hospedagem">
+                                    Hospedagem
+                                </option>
+
+                                <option value="Adestramento">
+                                    Adestramento
+                                </option>
+
+                            </select>
+
+                            {errors.service && (
+                                <span className={styles.error}>
+                                    {errors.service.message}
+                                </span>
+                            )}
+
+                        </div>
+
+
+                        {/* =========================
+                            BOTÃO
+                        ========================= */}
+
+                        <button
+                            type="submit"
+                            className={styles.submitButton}
+                        >
+                            <span>Confirmar agendamento</span>
+                            <FaPaw />
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
     );
 }
