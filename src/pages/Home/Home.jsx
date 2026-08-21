@@ -1,18 +1,15 @@
+import styles from "./Home.module.css";
 
-import CardServicos from "../../components/CardServicos/CardServicos";
-import BotaoAgendar from "../../components/BotaoAgendar/BotaoAgendar";
-
-import servicos  from "../../data/servicos";
 import logo from "../../assets/logo.png";
 
-import {
-  FaPaw,
-  FaStar,
-  FaSyringe,
-  FaCut,
-} from "react-icons/fa";
+import { FaPaw, FaStar, FaSyringe, FaCut } from "react-icons/fa";
 
-import styles from "./Home.module.css";
+import BotaoAgendar from "../../components/BotaoAgendar/BotaoAgendar";
+
+import CardServico from "../../components/CardServicos/CardServicos";
+
+import servicos from "../../data/servicos";
+
 
 function Home() {
   return (
@@ -80,51 +77,42 @@ function Home() {
                 />
               </div>
 
-              <div
-                className={`${styles.floatingTag} ${styles.vaccine}`}
-              >
-                <FaSyringe />
-                <span>Vacina em dia</span>
-              </div>
-
-              <div
-                className={`${styles.floatingTag} ${styles.grooming}`}
-              >
-                <FaCut />
-                <span>Tosa higiênica</span>
-              </div>
             </div>
           </div>
         </section>
 
         {/* SERVIÇOS */}
-        <section className={styles.services}>
-          <div className={styles.sectionHeader}>
-            <div className={styles.tag}>
-              NOSSOS SERVIÇOS
-            </div>
+<section className={styles.services}>
 
-            <h2>
-              Tudo que seu pet precisa, em um só
-              <br />
-              <span>lugar.</span>
-            </h2>
+  <div className={styles.sectionHeader}>
+    <div className={styles.tag}>
+      NOSSOS SERVIÇOS
+    </div>
 
-            <p>
-              Cuidado completo para deixar seu melhor amigo saudável,
-              feliz e bem cuidado.
-            </p>
-          </div>
+    <h2>
+      Tudo que seu pet precisa, em um só
+      <br />
+      <span>lugar.</span>
+    </h2>
 
-          <div className={styles.servicesGrid}>
-            {servicos.map((servico) => (
-              <CardServicos
-                key={servico.id}
-                {...servico}
-              />
-            ))}
-          </div>
-        </section>
+    <p>
+      Cuidado completo para deixar seu melhor amigo saudável,
+      feliz e bem cuidado.
+    </p>
+  </div>
+
+  <div className={styles.servicesGrid}>
+    {servicos.map((servico) => (
+      <CardServico
+        key={servico.id}
+        nome={servico.nome}
+        descricao={servico.descricao}
+        preco={servico.preco}
+      />
+    ))}
+  </div>
+
+</section>
 
         {/* CTA */}
         <section className={styles.cta}>

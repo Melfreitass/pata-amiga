@@ -1,5 +1,119 @@
 .card {
-    background-color: #bd5353;
-    height: 80px;
-    width: 80px;
+  background-color: #ffffff;
+  border: 1px solid #e8ebe7;
+  border-radius: 18px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 260px;
+
+  box-shadow: 0 8px 24px rgba(38, 59, 54, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 14px 30px rgba(38, 59, 54, 0.13);
+}
+
+/* ÍCONE */
+
+.icone {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background-color: #fff0e9;
+  color: #ed7047;
+
+  font-size: 21px;
+}
+
+/* NOME */
+
+.nome {
+  margin: 0 0 10px;
+
+  color: #263b36;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* DESCRIÇÃO */
+
+.descricao {
+  margin: 0 0 20px;
+
+  color: #68736f;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  flex: 1;
+}
+
+/* PREÇO */
+
+.preco {
+  margin: 0 0 18px;
+
+  color: #ed7047;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* BOTÃO */
+
+.botaoAgendar {
+  width: 100%;
+
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #294b43;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botaoAgendar:hover {
+  background-color: #1f3b34;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .nome {
+    font-size: 18px;
+  }
+
+  .descricao {
+    font-size: 13px;
+  }
 }
