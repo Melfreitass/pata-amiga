@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #f8faf7;
+  border-bottom: 1px solid #e5e9e4;
+}
+
+.container {
+  max-width: 1050px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoText span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #263f36;
+}
+
+.logoText small {
+  margin-top: 3px;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #e79a54;
+}
+
+/* MENU */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+  margin-right: 70px;
+}
+
+.navLink {
+  position: relative;
+  padding: 25px 0;
+
+  font-size: 9px;
+  font-weight: 500;
+  color: #52605a;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #263f36;
+}
+
+.navLink.active {
+  color: #263f36;
+}
+
+.navLink.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 17px;
+
+  height: 2px;
+  border-radius: 2px;
+
+  background-color: #ed7448;
+}
+
+/* BOTÃO */
+
+.button {
+  padding: 11px 20px;
+
+  background-color: #ed7448;
+  color: white;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 5px 12px rgba(237, 116, 72, 0.25);
+
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #df6338;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .nav {
+    gap: 15px;
+    margin-right: 20px;
+  }
+
+  .navLink {
+    font-size: 8px;
+  }
+
+  .button {
+    padding: 9px 14px;
+    font-size: 8px;
+  }
+
+  .logo img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logoText span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav {
+    display: none;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+}
