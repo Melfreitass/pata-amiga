@@ -1,234 +1,599 @@
-.form-section {
-    min-height: 100vh;
-    padding: 80px 24px;
-    background: #f3f7f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-}
+/* =========================================
+   PÁGINA
+========================================= */
 
-.form-container {
+.page {
     width: 100%;
-    max-width: 760px;
-    background: #ffffff;
-    border: 1px solid #d8e3dc;
-    border-radius: 28px;
-    padding: 42px;
-    box-shadow: 0 20px 50px rgba(21, 58, 54, 0.08);
+    min-height: calc(100vh - 64px);
+
+    padding: 78px 0 90px;
+
+    box-sizing: border-box;
+
+    background: #f3f7f2;
 }
 
-/* CABEÇALHO */
 
-.form-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 35px;
-}
+/* =========================================
+   ÁREA PRINCIPAL
+========================================= */
 
-.form-icon {
-    min-width: 58px;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: #214b46;
-    color: #f5dca8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 23px;
-    box-shadow: 0 8px 20px rgba(33, 75, 70, 0.2);
-}
+.bookingSection {
+    width: calc(100% - 168px);
+    max-width: 1200px;
+    min-height: 535px;
 
-.form-tag {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 30px;
-    background: #dcebe1;
-    color: #214b46;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 12px;
-}
+    margin: 0 auto;
 
-.form-header h2 {
-    margin: 0;
-    color: #103d39;
-    font-size: 32px;
-    line-height: 1.2;
-    font-weight: 800;
-}
+    padding: 48px;
 
-.form-header h2 span {
-    color: #ef5d3b;
-}
+    box-sizing: border-box;
 
-.form-header p {
-    margin-top: 12px;
-    margin-bottom: 0;
-    color: #61736f;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* FORM */
-
-.pet-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    color: #163f3b;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.input-wrapper {
-    position: relative;
-    display: flex;
     align-items: center;
+
+    gap: 55px;
+
+    background-color: #17443e;
+
+    border-radius: 28px;
+
+    position: relative;
+
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.07) 1.5px,
+        transparent 1.5px
+    );
+
+    background-size: 18px 18px;
 }
 
-.input-icon {
-    position: absolute;
-    left: 16px;
-    color: #6c8a82;
-    font-size: 15px;
-    pointer-events: none;
+
+/* =========================================
+   LADO ESQUERDO
+========================================= */
+
+.info {
+    max-width: 430px;
+
+    color: #ffffff;
 }
 
-.input-wrapper input,
-.input-wrapper select {
-    width: 100%;
-    height: 52px;
-    border: 1px solid #d3dfd8;
-    border-radius: 13px;
-    background: #f8faf8;
-    color: #183f3b;
+
+/* =========================================
+   TAG
+========================================= */
+
+.tag {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #e6d19a;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.tag svg {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.info h1 {
+    margin: 24px 0 17px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.info p {
+    max-width: 380px;
+
+    margin: 0;
+
+    color: #b9cec8;
+
     font-size: 14px;
-    padding: 0 16px 0 45px;
-    outline: none;
-    transition: all 0.2s ease;
-    box-sizing: border-box;
+
+    line-height: 1.7;
 }
 
-.input-wrapper input::placeholder {
-    color: #9aa9a4;
+
+/* =========================================
+   BENEFÍCIOS
+========================================= */
+
+.benefits {
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
 }
 
-.input-wrapper input:focus,
-.input-wrapper select:focus {
-    border-color: #ef5d3b;
-    background: #ffffff;
-    box-shadow: 0 0 0 4px rgba(239, 93, 59, 0.1);
-}
+.benefit {
+    display: flex;
 
-.input-wrapper select {
-    cursor: pointer;
-    appearance: none;
-}
+    align-items: center;
 
-/* ERRO */
+    gap: 10px;
 
-.error-message {
-    color: #e25335;
+    color: #d7e4e0;
+
     font-size: 12px;
-    margin-top: 6px;
+
     font-weight: 600;
 }
 
-/* BOTÃO */
 
-.submit-button {
-    grid-column: 1 / -1;
-    margin-top: 8px;
+/* Bolinha */
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #f26342;
+}
+
+
+/* =========================================
+   CARD DO FORMULÁRIO
+========================================= */
+
+.formCard {
     width: 100%;
-    height: 55px;
-    border: none;
-    border-radius: 30px;
-    background: #ef5d3b;
-    color: #ffffff;
+
+    padding: 35px 28px 28px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   ÍCONE SUPERIOR
+========================================= */
+
+.cardIcon {
+    position: absolute;
+
+    top: -16px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    gap: 12px;
+
+    background: #f4f7f4;
+
+    border: 4px solid #d4a437;
+
+    color: #17443e;
+
+    font-size: 12px;
+
+    box-sizing: content-box;
+}
+
+.cardIcon svg {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CABEÇALHO DO FORMULÁRIO
+========================================= */
+
+.formHeader {
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.formHeader h2 {
+    margin: 0;
+
+    color: #163f3a;
+
     font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 10px 22px rgba(239, 93, 59, 0.25);
-    transition: all 0.2s ease;
+
+    font-weight: 800;
 }
 
-.submit-button:hover {
-    background: #df4f31;
-    transform: translateY(-2px);
-    box-shadow: 0 13px 26px rgba(239, 93, 59, 0.3);
+.formHeader p {
+    margin: 7px 0 0;
+
+    color: #9aa9a5;
+
+    font-size: 10px;
 }
 
-.submit-button:active {
-    transform: translateY(0);
-}
 
-/* RODAPÉ */
+/* =========================================
+   CAMPOS
+========================================= */
 
-.form-footer {
+.field {
+    width: 100%;
+
     display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   LABEL + ÍCONE
+========================================= */
+
+.label {
+    display: flex;
+
+    flex-direction: row;
+
     align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+
+    color: #173e39;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* Ícone ao lado do texto */
+
+.label svg {
+    width: 12px;
+    height: 12px;
+
+    flex-shrink: 0;
+
+    color: #17443e;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   INPUTS E SELECTS
+========================================= */
+
+.field input,
+.field select {
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d8dfdc;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fafbfa;
+
+    color: #26423e;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.field input::placeholder {
+    color: #9daaa6;
+}
+
+
+/* Foco */
+
+.field input:focus,
+.field select:focus {
+    background: #ffffff;
+
+    border-color: #ef6341;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 99, 65, 0.09);
+}
+
+
+/* Select */
+
+.field select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   DUAS COLUNAS
+========================================= */
+
+.row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   ERROS
+========================================= */
+
+.error {
+    margin-top: 5px;
+
+    color: #e45738;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.submitButton {
+    width: 100%;
+
+    height: 40px;
+
+    margin-top: 3px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: center;
+
     justify-content: center;
-    gap: 9px;
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid #e3ebe6;
-    color: #668078;
-    font-size: 13px;
+
+    gap: 8px;
+
+    background: #ef623f;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 20px rgba(239, 98, 63, 0.25);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.form-footer svg {
-    color: #d49b2c;
+
+/* Ícone do botão */
+
+.submitButton svg {
+    font-size: 10px;
 }
 
-/* RESPONSIVO */
 
-@media (max-width: 650px) {
-    .form-section {
-        padding: 35px 16px;
+/* Hover */
+
+.submitButton:hover {
+    background: #df5434;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(239, 98, 63, 0.30);
+}
+
+
+/* Click */
+
+.submitButton:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 6px 14px rgba(239, 98, 63, 0.22);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .page {
+        padding: 60px 0 70px;
     }
 
-    .form-container {
-        padding: 28px 20px;
+    .bookingSection {
+        width: calc(100% - 60px);
+
+        grid-template-columns: 1fr;
+
+        padding: 42px;
+
+        gap: 40px;
+    }
+
+    .info {
+        max-width: 600px;
+    }
+
+    .formCard {
+        width: 100%;
+
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 35px 0 50px;
+    }
+
+    .bookingSection {
+        width: calc(100% - 28px);
+
+        min-height: auto;
+
+        padding: 32px 22px;
+
         border-radius: 22px;
+
+        gap: 32px;
     }
 
-    .form-header {
-        gap: 14px;
+    .info h1 {
+        font-size: 28px;
+
+        letter-spacing: -0.4px;
     }
 
-    .form-icon {
-        min-width: 48px;
-        width: 48px;
-        height: 48px;
-        font-size: 18px;
+    .info p {
+        font-size: 13px;
     }
 
-    .form-header h2 {
+    .row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .formCard {
+        padding: 32px 20px 22px;
+
+        border-radius: 16px;
+    }
+
+    .field input,
+    .field select {
+        height: 40px;
+    }
+
+    .submitButton {
+        height: 43px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 380px) {
+
+    .bookingSection {
+        width: calc(100% - 20px);
+
+        padding: 28px 17px;
+    }
+
+    .info h1 {
         font-size: 25px;
     }
 
-    .pet-form {
-        grid-template-columns: 1fr;
-    }
+    .formCard {
+        padding-left: 16px;
 
-    .submit-button {
-        grid-column: 1;
+        padding-right: 16px;
     }
 }
