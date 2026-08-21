@@ -1,20 +1,22 @@
-
-import CardServicos from "../../components/CardServicos/CardServicos";
-import BotaoAgendar from "../../components/BotaoAgendar/BotaoAgendar";
-
-import servicos  from "../../data/servicos";
-import logo from "../../assets/logo.png";
-
-import {
-  FaPaw,
-  FaStar,
-  FaSyringe,
-  FaCut,
-} from "react-icons/fa";
-
 import styles from "./Home.module.css";
 
+import logo from "../../assets/logo.png";
+
+import { FaPaw, FaStar, FaSyringe, FaCut } from "react-icons/fa";
+
+import BotaoAgendar from "../../components/BotaoAgendar/BotaoAgendar";
+
+import CardServico from "../../components/CardServicos/CardServicos";
+
+import Formulario from "../../components/Formulario/Formulario";
+
+import servicos from "../../data/servicos";
+
 function Home() {
+  const irParaFormulario = () => {
+    document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
 
@@ -41,7 +43,7 @@ function Home() {
               </p>
 
               <div className={styles.buttons}>
-                <BotaoAgendar />
+                <BotaoAgendar onClick={irParaFormulario} />
 
                 <button className={styles.secondaryButton}>
                   Ver serviços
@@ -80,25 +82,13 @@ function Home() {
                 />
               </div>
 
-              <div
-                className={`${styles.floatingTag} ${styles.vaccine}`}
-              >
-                <FaSyringe />
-                <span>Vacina em dia</span>
-              </div>
-
-              <div
-                className={`${styles.floatingTag} ${styles.grooming}`}
-              >
-                <FaCut />
-                <span>Tosa higiênica</span>
-              </div>
             </div>
           </div>
         </section>
 
         {/* SERVIÇOS */}
         <section className={styles.services}>
+
           <div className={styles.sectionHeader}>
             <div className={styles.tag}>
               NOSSOS SERVIÇOS
@@ -118,12 +108,15 @@ function Home() {
 
           <div className={styles.servicesGrid}>
             {servicos.map((servico) => (
-              <CardServicos
+              <CardServico
                 key={servico.id}
-                {...servico}
+                nome={servico.nome}
+                descricao={servico.descricao}
+                preco={servico.preco}
               />
             ))}
           </div>
+
         </section>
 
         {/* CTA */}
@@ -146,9 +139,12 @@ function Home() {
               </p>
             </div>
 
-            <BotaoAgendar />
+            <BotaoAgendar onClick={irParaFormulario} />
           </div>
         </section>
+
+        {/* FORMULÁRIO DE AGENDAMENTO */}
+        <Formulario />
       </main>
 
     </>
