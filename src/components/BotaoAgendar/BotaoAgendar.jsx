@@ -1,8 +1,8 @@
 import styles from "./BotaoAgendar.module.css";
 
-function BotaoAgendar({ texto = "Agendar horário" }) {
+function BotaoAgendar({ texto = "Agendar horário", onClick, type = "button" }) {
   return (
-    <button className={styles.botao}>
+    <button type={type} className={styles.botao} onClick={onClick}>
       {texto}
     </button>
   );

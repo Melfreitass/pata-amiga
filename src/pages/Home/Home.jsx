@@ -8,10 +8,12 @@ import BotaoAgendar from "../../components/BotaoAgendar/BotaoAgendar";
 
 import CardServico from "../../components/CardServicos/CardServicos";
 
-import servicos from "../../data/servicos";
-
 
 function Home() {
+  const irParaFormulario = () => {
+    document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
 
@@ -38,7 +40,7 @@ function Home() {
               </p>
 
               <div className={styles.buttons}>
-                <BotaoAgendar />
+                <BotaoAgendar onClick={irParaFormulario} />
 
                 <button className={styles.secondaryButton}>
                   Ver serviços
@@ -82,37 +84,6 @@ function Home() {
         </section>
 
         {/* SERVIÇOS */}
-<section className={styles.services}>
-
-  <div className={styles.sectionHeader}>
-    <div className={styles.tag}>
-      NOSSOS SERVIÇOS
-    </div>
-
-    <h2>
-      Tudo que seu pet precisa, em um só
-      <br />
-      <span>lugar.</span>
-    </h2>
-
-    <p>
-      Cuidado completo para deixar seu melhor amigo saudável,
-      feliz e bem cuidado.
-    </p>
-  </div>
-
-  <div className={styles.servicesGrid}>
-    {servicos.map((servico) => (
-      <CardServico
-        key={servico.id}
-        nome={servico.nome}
-        descricao={servico.descricao}
-        preco={servico.preco}
-      />
-    ))}
-  </div>
-
-</section>
 
         {/* CTA */}
         <section className={styles.cta}>
@@ -134,9 +105,12 @@ function Home() {
               </p>
             </div>
 
-            <BotaoAgendar />
+            <BotaoAgendar onClick={irParaFormulario} />
           </div>
         </section>
+
+        {/* FORMULÁRIO DE AGENDAMENTO */}
+        <Formulario />
       </main>
 
     </>

@@ -1,0 +1,202 @@
+.page {
+  --pine: #24433d;
+  --pine-deep: #16302b;
+  --sage: #cfe0d3;
+  --gold: #c89b3c;
+  --gold-soft: #efe0bc;
+  --coral: #e8623d;
+  --bg: #f1f5f0;
+  --ink: #172a26;
+  --line: rgba(23, 42, 38, 0.12);
+
+  font-family: "Karla", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page h4 {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--pine-deep);
+}
+
+/* HERO */
+.hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 24px 64px;
+  text-align: center;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--pine);
+  background: var(--sage);
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: rgba(23, 42, 38, 0.7);
+}
+
+/* VALORES */
+.values {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 24px 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.valueCard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px 26px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px -18px rgba(23, 42, 38, 0.35);
+}
+
+.valueIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--pine);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.valueCard h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.valueCard p {
+  font-size: 0.88rem;
+  color: rgba(23, 42, 38, 0.62);
+}
+
+/* EQUIPE */
+.team {
+  background: #fff;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.teamLead {
+  color: rgba(23, 42, 38, 0.62);
+  margin-bottom: 44px;
+}
+
+.teamGrid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teamCard {
+  background: var(--bg);
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+.teamAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  color: var(--gold);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.teamCard h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.teamCard span {
+  font-size: 0.82rem;
+  color: rgba(23, 42, 38, 0.6);
+}
+
+/* CTA */
+.cta {
+  background: var(--pine);
+  color: #fff;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 28px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  background: var(--coral);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px -10px rgba(232, 98, 61, 0.7);
+}
+
+@media (max-width: 800px) {
+  .values,
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}

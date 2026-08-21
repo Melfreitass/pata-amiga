@@ -27,7 +27,7 @@ export default function Formulario() {
     };
 
     return (
-        <main className={styles.page}>
+        <section id="agendamento" className={styles.page}>
 
             <section className={styles.bookingSection}>
 
@@ -320,6 +320,6 @@ export default function Formulario() {
 
             </section>
 
-        </main>
+        </section>
     );
 }
