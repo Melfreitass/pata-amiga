@@ -56,3 +56,6 @@ const servicos = [
     categoria: "Saúde",
   },
 ];
+
+
+export default servicos;
