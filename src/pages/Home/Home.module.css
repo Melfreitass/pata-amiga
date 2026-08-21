@@ -165,8 +165,8 @@
   position: relative;
   z-index: 2;
 
-  width: 260px;
-  height: 260px;
+  width: 350px;
+  height: 350px;
 
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@
 }
 
 .logo {
-  width: 75%;
+  width: 200%;
   height: auto;
 
   object-fit: contain;
