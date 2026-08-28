@@ -1,494 +1,476 @@
-/* =========================================
-   PÁGINA
-========================================= */
-
 .page {
-    width: 100%;
-    min-height: calc(100vh - 64px);
+  width: 100%;
+  min-height: calc(100vh - 90px);
 
-    padding: 78px 0 90px;
+  padding: 90px 0 100px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    background: #f3f7f2;
+  background: #f3f7f2;
 }
-
-
-/* =========================================
-   ÁREA PRINCIPAL
-========================================= */
 
 .bookingSection {
-    width: calc(100% - 168px);
-    max-width: 1200px;
-    min-height: 535px;
+  width: calc(100% - 80px);
+  max-width: 1250px;
+  min-height: 620px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    padding: 48px;
+  padding: 60px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 
-    gap: 55px;
+  gap: 70px;
 
-    background-color: #17443e;
+  background-color: #17443e;
 
-    border-radius: 28px;
+  border-radius: 30px;
 
-    position: relative;
+  position: relative;
 
-    background-image: radial-gradient(
-        rgba(255, 255, 255, 0.07) 1.5px,
-        transparent 1.5px
-    );
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.07) 1.5px,
+    transparent 1.5px
+  );
 
-    background-size: 18px 18px;
+  background-size: 18px 18px;
 }
 
-
-/* =========================================
-   LADO ESQUERDO
-========================================= */
+/* INFORMAÇÕES */
 
 .info {
-    max-width: 430px;
-
-    color: #ffffff;
+  max-width: 500px;
+  color: #ffffff;
 }
 
-
-/* =========================================
-   TAG
-========================================= */
-
 .tag {
-    width: fit-content;
+  width: fit-content;
 
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 
-    gap: 8px;
+  gap: 10px;
 
-    padding: 7px 13px;
+  padding: 9px 16px;
 
-    border-radius: 20px;
+  border-radius: 22px;
 
-    background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.12);
 
-    color: #e6d19a;
+  color: #e6d19a;
 
-    font-size: 10px;
+  font-size: 12px;
 
-    font-weight: 800;
+  font-weight: 800;
 
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 .tag svg {
-    font-size: 11px;
+  font-size: 14px;
 }
-
-
-/* =========================================
-   TÍTULO
-========================================= */
 
 .info h1 {
-    margin: 24px 0 17px;
+  margin: 28px 0 20px;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    font-size: 34px;
+  font-size: 42px;
 
-    line-height: 1.2;
+  line-height: 1.2;
 
-    font-weight: 800;
+  font-weight: 800;
 
-    letter-spacing: -0.6px;
+  letter-spacing: -0.8px;
 }
-
-
-/* =========================================
-   DESCRIÇÃO
-========================================= */
 
 .info p {
-    max-width: 380px;
+  max-width: 450px;
 
-    margin: 0;
+  margin: 0;
 
-    color: #b9cec8;
+  color: #b9cec8;
 
-    font-size: 14px;
+  font-size: 16px;
 
-    line-height: 1.7;
+  line-height: 1.7;
 }
 
-
-/* =========================================
-   BENEFÍCIOS
-========================================= */
-
 .benefits {
-    margin-top: 25px;
+  margin-top: 32px;
 
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    gap: 12px;
+  gap: 16px;
 }
 
 .benefit {
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 10px;
+  gap: 12px;
 
-    color: #d7e4e0;
+  color: #d7e4e0;
 
-    font-size: 12px;
+  font-size: 14px;
 
-    font-weight: 600;
+  font-weight: 600;
 }
-
-
-/* Bolinha */
 
 .dot {
-    width: 6px;
-    height: 6px;
+  width: 8px;
+  height: 8px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #f26342;
+  background: #f26342;
 }
 
-
-/* =========================================
-   CARD DO FORMULÁRIO
-========================================= */
+/* CARD DO FORMULÁRIO */
 
 .formCard {
-    width: 100%;
+  width: 100%;
 
-    padding: 35px 28px 28px;
+  padding: 42px 35px 35px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    border-radius: 18px;
+  border-radius: 22px;
 
-    position: relative;
+  position: relative;
 
-    box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
-
-/* =========================================
-   ÍCONE SUPERIOR
-========================================= */
+/* ÍCONE */
 
 .cardIcon {
-    position: absolute;
+  position: absolute;
 
-    top: -16px;
+  top: -19px;
 
-    left: 50%;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    width: 30px;
-    height: 30px;
+  width: 38px;
+  height: 38px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-    background: #f4f7f4;
+  background: #f4f7f4;
 
-    border: 4px solid #d4a437;
+  border: 4px solid #d4a437;
 
-    color: #17443e;
+  color: #17443e;
 
-    font-size: 12px;
+  font-size: 15px;
 
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .cardIcon svg {
-    font-size: 12px;
+  font-size: 15px;
 }
 
-
-/* =========================================
-   CABEÇALHO DO FORMULÁRIO
-========================================= */
+/* CABEÇALHO */
 
 .formHeader {
-    margin-bottom: 25px;
+  margin-bottom: 30px;
 
-    text-align: center;
+  text-align: center;
 }
 
 .formHeader h2 {
-    margin: 0;
+  margin: 0;
 
-    color: #163f3a;
+  color: #163f3a;
 
-    font-size: 15px;
+  font-size: 22px;
 
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .formHeader p {
-    margin: 7px 0 0;
+  margin: 9px 0 0;
 
-    color: #9aa9a5;
+  color: #9aa9a5;
 
-    font-size: 10px;
+  font-size: 13px;
 }
 
-
-/* =========================================
-   CAMPOS
-========================================= */
+/* CAMPOS */
 
 .field {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    margin-bottom: 16px;
+  margin-bottom: 20px;
 }
-
-
-/* =========================================
-   LABEL + ÍCONE
-========================================= */
 
 .label {
-    display: flex;
+  display: flex;
 
-    flex-direction: row;
+  flex-direction: row;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 7px;
+  gap: 8px;
 
-    margin-bottom: 7px;
+  margin-bottom: 8px;
 
-    color: #173e39;
+  color: #173e39;
 
-    font-size: 9px;
+  font-size: 12px;
 
-    font-weight: 800;
+  font-weight: 800;
 
-    letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
-
-
-/* Ícone ao lado do texto */
 
 .label svg {
-    width: 12px;
-    height: 12px;
+  width: 15px;
+  height: 15px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    color: #17443e;
+  color: #17443e;
 
-    font-size: 12px;
+  font-size: 15px;
 }
 
-
-/* =========================================
-   INPUTS E SELECTS
-========================================= */
+/* INPUTS */
 
 .field input,
 .field select {
-    width: 100%;
+  width: 100%;
 
-    height: 36px;
+  height: 46px;
 
-    padding: 0 12px;
+  padding: 0 14px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    border: 1px solid #d8dfdc;
+  border: 1px solid #d8dfdc;
 
-    border-radius: 9px;
+  border-radius: 10px;
 
-    outline: none;
+  outline: none;
 
-    background: #fafbfa;
+  background: #fafbfa;
 
-    color: #26423e;
+  color: #26423e;
 
-    font-family: inherit;
+  font-family: inherit;
 
-    font-size: 11px;
+  font-size: 14px;
 
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
-
-
-/* Placeholder */
 
 .field input::placeholder {
-    color: #9daaa6;
+  color: #9daaa6;
 }
-
-
-/* Foco */
 
 .field input:focus,
 .field select:focus {
-    background: #ffffff;
+  background: #ffffff;
 
-    border-color: #ef6341;
+  border-color: #ef6341;
 
-    box-shadow:
-        0 0 0 3px rgba(239, 99, 65, 0.09);
+  box-shadow: 0 0 0 3px rgba(239, 99, 65, 0.09);
 }
-
-
-/* Select */
 
 .field select {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
-/* =========================================
-   DUAS COLUNAS
-========================================= */
+/* DUAS COLUNAS */
 
 .row {
-    width: 100%;
+  width: 100%;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
-    gap: 12px;
+  gap: 15px;
 }
 
-
-/* =========================================
-   ERROS
-========================================= */
+/* ERROS */
 
 .error {
-    margin-top: 5px;
+  margin-top: 6px;
 
-    color: #e45738;
+  color: #e45738;
 
-    font-size: 9px;
+  font-size: 11px;
 
-    line-height: 1.3;
+  line-height: 1.3;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
-
-/* =========================================
-   BOTÃO
-========================================= */
+/* BOTÃO */
 
 .submitButton {
-    width: 100%;
+  width: 100%;
 
-    height: 40px;
+  height: 48px;
 
-    margin-top: 3px;
+  margin-top: 5px;
 
-    padding: 0 18px;
+  padding: 0 20px;
 
-    border: none;
+  border: none;
+
+  border-radius: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  background: #ef623f;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 9px 20px rgba(239, 98, 63, 0.25);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submitButton svg {
+  font-size: 13px;
+}
+
+.submitButton:hover {
+  background: #df5434;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 24px rgba(239, 98, 63, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+
+  box-shadow: 0 6px 14px rgba(239, 98, 63, 0.22);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+  .bookingSection {
+    width: calc(100% - 40px);
+
+    padding: 45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+
+  .info h1 {
+    font-size: 36px;
+  }
+
+  .info p {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 50px 0 60px;
+  }
+
+  .bookingSection {
+    width: calc(100% - 30px);
+
+    padding: 35px 22px;
 
     border-radius: 22px;
 
-    display: flex;
+    gap: 40px;
+  }
 
-    align-items: center;
+  .info h1 {
+    font-size: 30px;
+  }
 
-    justify-content: center;
+  .info p {
+    font-size: 14px;
+  }
 
-    gap: 8px;
-
-    background: #ef623f;
-
-    color: #ffffff;
-
-    font-family: inherit;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 9px 20px rgba(239, 98, 63, 0.25);
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-/* Ícone do botão */
-
-.submitButton svg {
+  .tag {
     font-size: 10px;
+  }
+
+  .formCard {
+    padding: 38px 22px 25px;
+  }
+
+  .formHeader h2 {
+    font-size: 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .field input,
+  .field select {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .submitButton {
+    height: 46px;
+    font-size: 13px;
+  }
 }
-
-
-/* Hover */
-
-.submitButton:hover {
-    background: #df5434;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 12px 24px rgba(239, 98, 63, 0.30);
-}
-
-
-/* Click */
-
-.submitButton:active {
-    transform: translateY(0);
-
-    box-shadow:
-        0 6px 14px rgba(239, 98, 63, 0.22);
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
 
 @media (max-width: 950px) {
 
@@ -518,11 +500,6 @@
         margin: 0 auto;
     }
 }
-
-
-/* =========================================
-   CELULAR
-========================================= */
 
 @media (max-width: 600px) {
 
@@ -573,11 +550,6 @@
         height: 43px;
     }
 }
-
-
-/* =========================================
-   CELULAR PEQUENO
-========================================= */
 
 @media (max-width: 380px) {
 

@@ -1,15 +1,15 @@
 .header {
   width: 100%;
-  height: 70px;
+  height: 90px;
   background-color: #f8faf7;
   border-bottom: 1px solid #e5e9e4;
 }
 
 .container {
-  max-width: 1050px;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 
   display: flex;
   align-items: center;
@@ -21,12 +21,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   text-decoration: none;
 }
 
 .logo img {
-  height: 38px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
@@ -37,16 +38,18 @@
 }
 
 .logoText span {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   color: #263f36;
 }
 
 .logoText small {
-  margin-top: 3px;
-  font-size: 6px;
+  margin-top: 5px;
+
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+
   color: #e79a54;
 }
 
@@ -55,17 +58,20 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 40px;
+
   margin-left: auto;
-  margin-right: 70px;
+  margin-right: 60px;
 }
 
 .navLink {
   position: relative;
-  padding: 25px 0;
 
-  font-size: 9px;
+  padding: 32px 0;
+
+  font-size: 15px;
   font-weight: 500;
+
   color: #52605a;
   text-decoration: none;
 
@@ -78,18 +84,21 @@
 
 .navLink.active {
   color: #263f36;
+  font-weight: 600;
 }
 
 .navLink.active::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   right: 0;
-  bottom: 17px;
+  bottom: 20px;
 
-  height: 2px;
-  border-radius: 2px;
+  height: 3px;
+
+  border-radius: 3px;
 
   background-color: #ed7448;
 }
@@ -97,15 +106,16 @@
 /* BOTÃO */
 
 .button {
-  padding: 11px 20px;
+  padding: 14px 25px;
 
   background-color: #ed7448;
   color: white;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
+
   text-decoration: none;
 
   box-shadow: 0 5px 12px rgba(237, 116, 72, 0.25);
@@ -115,41 +125,41 @@
 
 .button:hover {
   background-color: #df6338;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* RESPONSIVO */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 
   .nav {
-    gap: 15px;
-    margin-right: 20px;
+    gap: 25px;
+    margin-right: 30px;
   }
 
   .navLink {
-    font-size: 8px;
+    font-size: 14px;
   }
 
   .button {
-    padding: 9px 14px;
-    font-size: 8px;
+    padding: 12px 20px;
+    font-size: 13px;
   }
 
   .logo img {
-    width: 34px;
-    height: 34px;
+    width: 46px;
+    height: 46px;
   }
 
   .logoText span {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .nav {
     display: none;
   }

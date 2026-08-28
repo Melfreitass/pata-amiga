@@ -5,23 +5,28 @@ import logo from "../../assets/logo.png";
 import { FaPaw, FaStar, FaSyringe, FaCut } from "react-icons/fa";
 
 import BotaoAgendar from "../../components/BotaoAgendar/BotaoAgendar";
-
 import CardServico from "../../components/CardServicos/CardServicos";
+import Formulario from "../../components/Formulario/Formulario";
 
+import servicos from "../../data/servicos";
 
 function Home() {
   const irParaFormulario = () => {
-    document.getElementById("agendamento")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("agendamento")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
-
       <main>
+
         {/* HERO */}
         <section className={styles.hero}>
           <div className={styles.heroContainer}>
+
             <div className={styles.heroContent}>
+
               <div className={styles.tag}>
                 <FaPaw />
                 <span>CUIDADO VETERINÁRIO & ESTÉTICA</span>
@@ -48,6 +53,7 @@ function Home() {
               </div>
 
               <div className={styles.stats}>
+
                 <div className={styles.stat}>
                   <strong>12 anos</strong>
                   <span>de experiência</span>
@@ -64,11 +70,13 @@ function Home() {
                   </strong>
                   <span>avaliação média</span>
                 </div>
+
               </div>
             </div>
 
             {/* ÁREA DA LOGO */}
             <div className={styles.heroVisual}>
+
               <div className={styles.circle}></div>
 
               <div className={styles.logoContainer}>
@@ -79,16 +87,72 @@ function Home() {
                 />
               </div>
 
+              <div
+                className={`${styles.floatingTag} ${styles.vaccine}`}
+              >
+                <FaSyringe />
+                <span>Vacina em dia</span>
+              </div>
+
+              <div
+                className={`${styles.floatingTag} ${styles.grooming}`}
+              >
+                <FaCut />
+                <span>Tosa higiênica</span>
+              </div>
+
             </div>
+
           </div>
         </section>
 
+
         {/* SERVIÇOS */}
+        <section className={styles.services}>
+
+          <div className={styles.sectionHeader}>
+
+            <div className={styles.tag}>
+              NOSSOS SERVIÇOS
+            </div>
+
+            <h2>
+              Tudo que seu pet precisa, em um só
+              <br />
+              <span>lugar.</span>
+            </h2>
+
+            <p>
+              Cuidado completo para deixar seu melhor amigo saudável,
+              feliz e bem cuidado.
+            </p>
+
+          </div>
+
+
+          <div className={styles.servicesGrid}>
+
+            {servicos.map((servico) => (
+              <CardServico
+                key={servico.id}
+                nome={servico.nome}
+                descricao={servico.descricao}
+                preco={servico.preco}
+              />
+            ))}
+
+          </div>
+
+        </section>
+
 
         {/* CTA */}
         <section className={styles.cta}>
+
           <div className={styles.ctaContent}>
+
             <div>
+
               <span className={styles.ctaTag}>
                 SEU PET MERECE O MELHOR
               </span>
@@ -103,16 +167,20 @@ function Home() {
                 Agende agora mesmo e proporcione todo o cuidado que seu
                 pet merece.
               </p>
+
             </div>
 
             <BotaoAgendar onClick={irParaFormulario} />
+
           </div>
+
         </section>
+
 
         {/* FORMULÁRIO DE AGENDAMENTO */}
         <Formulario />
-      </main>
 
+      </main>
     </>
   );
 }
