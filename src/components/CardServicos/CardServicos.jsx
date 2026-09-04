@@ -1,30 +1,34 @@
 import { FaPaw } from "react-icons/fa";
+import BotaoAgendar from "../BotaoAgendar/BotaoAgendar";
 import styles from "./CardServicos.module.css";
 
-function CardServico({ nome, descricao, preco, icone }) {
-  return (
-    <div className={styles.card}>
-      <div className={styles.icone}>
-        {icone || <FaPaw />}
-      </div>
+function CardServico({ nome, descricao, preco, icone, onAgendar }) {
+    return (
+        <div className={styles.card}>
 
-      <h3 className={styles.nome}>
-        {nome}
-      </h3>
+            <div className={styles.icone}>
+                {icone || <FaPaw />}
+            </div>
 
-      <p className={styles.descricao}>
-        {descricao}
-      </p>
+            <h3 className={styles.nome}>
+                {nome}
+            </h3>
 
-      <p className={styles.preco}>
-        R$ {preco.toFixed(2)}
-      </p>
+            <p className={styles.descricao}>
+                {descricao}
+            </p>
 
-      <button className={styles.botaoAgendar}>
-        Agendar serviço
-      </button>
-    </div>
-  );
+            <p className={styles.preco}>
+                R$ {preco.toFixed(2)}
+            </p>
+
+            <BotaoAgendar
+                texto="Agendar serviço"
+                onClick={onAgendar}
+            />
+
+        </div>
+    );
 }
 
 export default CardServico;

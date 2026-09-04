@@ -74,7 +74,6 @@ function Home() {
               </div>
             </div>
 
-            {/* ÁREA DA LOGO */}
             <div className={styles.heroVisual}>
 
               <div className={styles.circle}></div>
@@ -106,8 +105,6 @@ function Home() {
           </div>
         </section>
 
-
-        {/* SERVIÇOS */}
         <section className={styles.services}>
 
           <div className={styles.sectionHeader}>
@@ -131,22 +128,20 @@ function Home() {
 
 
           <div className={styles.servicesGrid}>
-
-            {servicos.map((servico) => (
-              <CardServico
-                key={servico.id}
-                nome={servico.nome}
-                descricao={servico.descricao}
-                preco={servico.preco}
-              />
-            ))}
-
-          </div>
+    {servicos.map((servico) => (
+        <CardServico
+            key={servico.id}
+            nome={servico.nome}
+            descricao={servico.descricao}
+            preco={servico.preco}
+            onAgendar={irParaFormulario}
+        />
+    ))}
+</div>
 
         </section>
 
 
-        {/* CTA */}
         <section className={styles.cta}>
 
           <div className={styles.ctaContent}>
@@ -176,8 +171,6 @@ function Home() {
 
         </section>
 
-
-        {/* FORMULÁRIO DE AGENDAMENTO */}
         <Formulario />
 
       </main>

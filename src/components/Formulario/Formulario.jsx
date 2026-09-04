@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "../../schema/formSchema";
@@ -14,6 +15,8 @@ import {
 import styles from "./Formulario.module.css";
 
 export default function Formulario() {
+    const [enviado, setEnviado] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -23,17 +26,14 @@ export default function Formulario() {
     });
 
     const onSubmit = (data) => {
-        console.log("Dados do formulário:", data);
-    };
+    console.log("Dados do formulário:", data);
+    setEnviado(true);
+};
 
     return (
         <section id="agendamento" className={styles.page}>
 
             <section className={styles.bookingSection}>
-
-                {/* =========================
-                    LADO ESQUERDO
-                ========================= */}
 
                 <div className={styles.info}>
 
@@ -75,21 +75,11 @@ export default function Formulario() {
 
                 </div>
 
-
-                {/* =========================
-                    FORMULÁRIO
-                ========================= */}
-
                 <div className={styles.formCard}>
-
-                    {/* Ícone superior */}
 
                     <div className={styles.cardIcon}>
                         <FaPaw />
                     </div>
-
-
-                    {/* Título */}
 
                     <div className={styles.formHeader}>
                         <h2>Etiqueta de agendamento</h2>
@@ -101,10 +91,6 @@ export default function Formulario() {
 
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-
-                        {/* =========================
-                            NOME DO TUTOR
-                        ========================= */}
 
                         <div className={styles.field}>
 
@@ -131,14 +117,7 @@ export default function Formulario() {
 
                         </div>
 
-
-                        {/* =========================
-                            PET + ESPÉCIE
-                        ========================= */}
-
                         <div className={styles.row}>
-
-                            {/* NOME DO PET */}
 
                             <div className={styles.field}>
 
@@ -164,9 +143,6 @@ export default function Formulario() {
                                 )}
 
                             </div>
-
-
-                            {/* ESPÉCIE */}
 
                             <div className={styles.field}>
 
@@ -194,7 +170,6 @@ export default function Formulario() {
                             </div>
 
                         </div>
-                        {/* RAÇA */}
 
                         <div className={styles.field}>
 
@@ -215,16 +190,11 @@ export default function Formulario() {
 
                             {errors.race && (
                                 <span className={styles.error}>
-                                    {errors.species.message}
+                                    {errors.race.message}
                                 </span>
                             )}
 
                         </div>
-
-
-                        {/* =========================
-                            TELEFONE
-                        ========================= */}
 
                         <div className={styles.field}>
 
@@ -250,11 +220,6 @@ export default function Formulario() {
                             )}
 
                         </div>
-
-
-                        {/* =========================
-                            SERVIÇO
-                        ========================= */}
 
                         <div className={styles.field}>
 
@@ -302,10 +267,6 @@ export default function Formulario() {
                         </div>
 
 
-                        {/* =========================
-                            BOTÃO
-                        ========================= */}
-
                         <button
                             type="submit"
                             className={styles.submitButton}
@@ -315,6 +276,16 @@ export default function Formulario() {
                         </button>
 
                     </form>
+
+                    {enviado && (
+    <div className={styles.sucesso}>
+        <FaPaw />
+        <h3>Formulário enviado com sucesso! 🐾</h3>
+        <p>
+            Recebemos seus dados. Nossa equipe entrará em contato em breve.
+        </p>
+    </div>
+)}
 
                 </div>
 

@@ -394,6 +394,28 @@
   box-shadow: 0 6px 14px rgba(239, 98, 63, 0.22);
 }
 
+.sucesso {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.sucesso svg {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.sucesso h3 {
+    margin: 5px 0;
+}
+
+.sucesso p {
+    margin: 0;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 900px) {
